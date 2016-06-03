@@ -41,9 +41,8 @@ module Geocoder
 
       def query_url_google_params(query)
         {
-          input: query.text,
-          language: query.language || configuration.language
-        }
+          input: query.text
+        }.merge(super)
       end
     end
   end
